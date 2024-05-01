@@ -5,17 +5,8 @@ from google.cloud import firestore
 brasilia_tz = datetime.timezone(datetime.timedelta(hours=-3))
 
 @functions_framework.http
-def hello(request):
-    db = firestore.Client()
-    
-    users_ref = db.collection("users")
-    docs = users_ref.stream()
-
-    users = []
-    for doc in docs:
-        users.append(f"{doc.id} => {doc.to_dict()}")
-        
-    return users
+def hello():
+    return "Working"
 
 @functions_framework.http
 def save_message(request):
@@ -36,3 +27,4 @@ def save_message(request):
     doc_ref.set(message)
 
     return "Ok!"
+

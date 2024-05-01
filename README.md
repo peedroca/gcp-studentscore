@@ -1,7 +1,10 @@
 # gcp-studentscore
-Connecting GCP with my Student Score application
 
-First steps [here.](https://cloud.google.com/firestore/docs/create-database-server-client-library?hl=en#python)
+Connecting GCP with my Student Score application.
+
+First steps to configure Google Cloud Platform [here.](https://cloud.google.com/firestore/docs/create-database-server-client-library?hl=en#python)
+
+![](/diagrams/architecture.png)
 
 ### Setting up enviroment variables
 ```bash

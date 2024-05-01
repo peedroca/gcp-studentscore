@@ -26,4 +26,13 @@ def putFieldUser():
     doc_ref = db.collection("users").document("pmoreira")
     doc_ref.update({ "active": True })
 
-listUsers()
+def testSubCollection():
+    doc_ref = db.collection("test") \
+        .document("1") \
+        .collection("test2") \
+        .document("2")
+    
+    data = { "description": "test subdocument" }
+    doc_ref.set(data)
+
+testSubCollection()
